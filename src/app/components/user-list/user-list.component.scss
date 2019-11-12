@@ -1,0 +1,19 @@
+.full-width {
+  width: 100%;
+}
+
+mat-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+mat-list-item {
+  height: 150px !important;
+  cursor: pointer;
+
+  &:hover {
+    background: #ccc;
+  }
+}

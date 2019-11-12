@@ -1,0 +1,41 @@
+mat-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+mat-list-item {
+  height: 75px !important;
+  cursor: pointer;
+  justify-content: space-between;
+
+  .name {
+    flex: 1;
+  }
+
+  .description {
+    flex: 1;
+  }
+
+  .favourite {
+    z-index: 10;
+  }
+
+  &:hover {
+    background: #ccc;
+  }
+}
+
+mat-card {
+  height: 30px;
+
+  &.info {
+    flex: 15;
+  }
+
+  &.favourite {
+    flex: 1;
+    margin-left: 15px;
+  }
+}

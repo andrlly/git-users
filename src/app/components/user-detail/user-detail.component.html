@@ -1,0 +1,19 @@
+<mat-list *ngIf="(user$ | async)" role="list">
+  <mat-list-item *ngFor="let repo of (user$ | async);" role="listitem">
+    <mat-card (click)="openDialog(repo)" class="info" role="group">
+      <div class="name">
+        {{repo['name']}}
+      </div>
+      <div class="description">
+        {{repo['description'] ? repo['description'] : 'Description...'}}
+      </div>
+    </mat-card>
+    <mat-card (click)="addToFavourite(repo)" class="favourite">
+      {{this.repoInFavourite(repo)}}
+      <div>
+        <mat-icon [style.color]="repo['inFavourite'] ?  'gold' : ''">star</mat-icon>
+      </div>
+    </mat-card>
+  </mat-list-item>
+</mat-list>
+

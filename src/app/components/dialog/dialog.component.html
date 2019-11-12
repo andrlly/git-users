@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{repo.name}}</h1>
+<div mat-dialog-content>
+  <div *ngIf="repo.description">Description: {{repo.description}}</div>
+  <div *ngIf="repo.language">Language: {{repo.language}}</div>
+  <div>Has issues:
+    <mat-icon [style.color]="repo.has_issues ? 'green' : 'red'">{{repo.has_issues ? 'done' : 'close'}}</mat-icon>
+  </div>
+  <div><a href="{{repo.html_url}}" target="_blank">Open project</a></div>
+</div>
+<div mat-dialog-actions>
+  <button (click)="onNoClick()" color="primary" mat-button>OK, Thanks</button>
+</div>
+

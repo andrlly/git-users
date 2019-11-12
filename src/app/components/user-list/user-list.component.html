@@ -1,0 +1,11 @@
+<mat-form-field class="full-width">
+  <input [formControl]="searchString" matInput placeholder="Search...">
+</mat-form-field>
+
+<mat-list *ngIf="(users$ | async)" role="list">
+  <mat-list-item (click)="goUserDetail(user.login)" *ngFor="let user of (users$ | async); let i = index"
+                 role="listitem">
+    <mat-card role="group">{{user.login}} <img alt="" height="100" src="{{user.avatar_url}}" width="100"></mat-card>
+  </mat-list-item>
+</mat-list>
+

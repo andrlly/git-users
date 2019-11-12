@@ -1,0 +1,18 @@
+<mat-list *ngIf="(favouriteItems$ | async)" role="list">
+  <mat-list-item *ngFor="let repo of (favouriteItems$ | async);" role="listitem">
+    <mat-card class="info" role="group">
+      <div class="name">
+        {{repo.name}}
+      </div>
+      <div class="description">
+        {{repo.description ? repo.description : 'Description...'}}
+      </div>
+    </mat-card>
+    <mat-card (click)="removeFavourite(repo.id)" class="favourite">
+      <div>
+        <mat-icon [style.color]="'red'">clear</mat-icon>
+      </div>
+    </mat-card>
+  </mat-list-item>
+</mat-list>
+

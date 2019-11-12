@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+.mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+  }
+}
+
+.mat-dialog-actions {
+  justify-content: center;
+}
